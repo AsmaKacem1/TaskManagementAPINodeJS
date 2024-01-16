@@ -5,7 +5,9 @@ const multer=require('multer')
 
 const router=require('express').Router()
 
-router.get('/',guardAuth.isAuth,taskController.getAllTaskController)
+
+
+router.get('/',guardAuth.isAuth,taskController.getTasksController)
 
 
 

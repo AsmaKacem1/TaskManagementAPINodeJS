@@ -1,13 +1,6 @@
 const taskModel=require('../models/task.model')
 
-exports.getAllTaskController=(req,res,next)=>{
-    taskModel.getAllTasks().then(tasks=> {
-        res.render('tasks',{
-            tasks:tasks,
-            verifUser:req.session.userId})
-    })
 
-}
 
 
 exports.getAddTaskController=(req,res,next)=>{
@@ -31,6 +24,14 @@ exports.getMyTasksController=(req,res,next)=>{
     })
     
 }
+
+exports.getTasksController=(req,res,next)=>{
+    taskModel.getMyTasks(req.session.userId).then((tasks)=>{
+        res.render('tasks',{tasks:tasks,verifUser:req.session.userId})
+    })
+    
+}
+
 
 exports.deleteMyTaskController=(req,res,next)=>{
     let id=req.params.id

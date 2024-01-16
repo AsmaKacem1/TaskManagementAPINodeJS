@@ -15,10 +15,9 @@
                     <div class="row grid">
                     <% for (let task of tasks) {%>
                         <div class="col-lg-4 col-md-4 all des">
-                        <div class="product-item">
-                            <a href="/tasks/<%= task._id %>" ></a>
+                        <div class="product-item"> 
                             <div class="down-content">
-                            <a href="/tasks/<%= task._id %>" ><h4><%= task.title %></h4></a>
+                            <h4><%= task.title %></h4></a>
                             <p><%= task.description %></p>
                             <p><%= task.user %></p>
                             <h7><%= task.status %></h7>

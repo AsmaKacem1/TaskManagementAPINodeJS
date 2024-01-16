@@ -41,13 +41,13 @@
         const dueDateInput = document.getElementById('dueDate');
         const statusSelect = document.getElementById('status');
 
-        // Implement your validation logic here
+        
         const titleIsValid = titleInput.value.trim().length > 0;
         const descriptionIsValid = descriptionInput.value.trim().length > 0;
         const dueDateIsValid = dueDateInput.value.trim().length > 0;
         const statusIsValid = statusSelect.value === 'Completed' || statusSelect.value === 'Uncompleted';
 
-        return titleIsValid && descriptionIsValid && dueDateIsValid && statusIsValid; // Adjust based on your validation logic
+        return titleIsValid && descriptionIsValid && dueDateIsValid && statusIsValid; 
     }
 
     // Function to enable/disable the "Add Task" button based on input validity
