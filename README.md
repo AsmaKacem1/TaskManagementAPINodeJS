@@ -65,6 +65,3 @@ The implemented authentication system for the Task Management solution allows us
 ## Feedback
 Feedback on the project is highly appreciated. Feel free to open issues or contribute to further enhance the functionality and user experience.
 
-## Estimated Time Spent
-2 days
-
