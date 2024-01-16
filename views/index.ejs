@@ -1,0 +1,33 @@
+<%- include('parts/top.ejs') %>
+
+    <!-- Page Content -->
+    
+    <div class="latest-products">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="section-heading">
+            <h2>Tasks</h2>
+    
+            </div>
+        </div>
+        <% for (let task of tasks) {%>
+        <div class="col-md-4">
+            <div class="product-item">
+            <a href="/task/<%= task._id %>" ></a>
+            <div class="down-content">
+                <h4><%= task.title %></h4></a>
+                <p><%= task.description %></p>
+                <p><%= task.user %></p>
+                <p><%= task.status %></p>
+                <p><%= task.due_date %></p>
+            </div>
+            </div>
+            </div>
+            <%}%>
+        </div>
+        </div>
+    </div>
+
+
+<%- include('parts/bottom.ejs') %>
