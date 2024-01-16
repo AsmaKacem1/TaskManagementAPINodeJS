@@ -1,0 +1,59 @@
+<%- include('parts/top.ejs') %>
+
+
+    <!-- Page Content -->
+    <div class="page-heading products-heading header-text">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="text-content">
+                <h2>All Tasks</h2>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="container">
+            <div class="row">
+            
+            <div class="col-md-12">
+                <div class="filters-content">
+                    <div class="row grid">
+                    <% for (let task of tasks) {%>
+                        <div class="col-lg-4 col-md-4 all des">
+                        <div class="product-item">
+                            <a href="/tasks/<%= task._id %>" ></a>
+                            <div class="down-content">
+                            <a href="/tasks/<%= task._id %>" ><h4><%= task.title %></h4></a>
+                            <p><%= task.description %></p>
+                            <p><%= task.user %></p>
+                            <p><%= task.status %></p>
+                            <p><%= task.due_date %></p>
+                
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+            </div>
+        
+            <div class="col-md-12">
+                <ul class="pages">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+<%- include('parts/bottom.ejs') %>

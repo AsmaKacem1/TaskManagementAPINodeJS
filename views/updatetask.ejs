@@ -1,0 +1,36 @@
+<%- include('parts/top.ejs') %>
+
+<div class="container">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <form method="post" action="/mytasks/update/<%= myTask._id %>" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Task Title</label>
+            <input type="text" class="form-control" name="title" value="<%= myTask.title %>">
+        </div>
+        <div class="form-group">
+            <label >Description</label>
+            <textarea type="text" class="form-control" name="description"><%= myTask.description %></textarea>
+        </div>
+        <input type="hidden" name="taskId" value="<%= myTask._id %>">
+
+        <div class="form-group">
+            <label>Status</label>
+            <input type="text" class="form-control" name="status" value="<%= myTask.status %>">
+        </div>
+
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" class="form-control" name="due_date" value="<%= myTask.due_date %>">
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+
+<%- include('parts/bottom.ejs') %>
