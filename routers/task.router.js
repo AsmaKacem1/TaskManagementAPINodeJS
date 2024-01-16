@@ -12,14 +12,11 @@ router.get('/',guardAuth.isAuth,taskController.getAllTaskController)
 route.get('/addtask',guardAuth.isAuth,taskController.getAddTaskController)
 route.post('/addtask',multer({
 storage:multer.diskStorage({
-    destination:function(req,file,cb){
-        cb(null,'assets/uploads')
-    },
-    filename:function(req,file,cb){
-        cb(null,Date.now()+'-'+file.originalname)
+    filename:function(req,cb){
+        cb(null)
     }
 })
-}).single('image'),
+}).single(),
 guardAuth.isAuth,taskController.postAddTaskController)
 
 

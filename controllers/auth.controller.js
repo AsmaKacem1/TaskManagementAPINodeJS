@@ -26,7 +26,7 @@ exports.getLoginPage=(req,res,next)=>{
 exports.postLoginData=(req,res,next)=>{
     authModel.loginFunctionModel(req.body.email,req.body.password).then((id)=>{
         req.session.userId=id
-        res.redirect('/')
+        res.redirect('/tasks')
     }).catch((err)=>{
         console.log(err)
         res.redirect('/login')
